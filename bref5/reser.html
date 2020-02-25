@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resrever</title>
+    <link rel="stylesheet" href="styleres.css">
+</head>
+<body>
+    <header class="header">
+        <img src="image/logocar.png" alt="logo" class="logo">
+           <input class="menu-btn" type="checkbox" id="menu-btn" />
+           <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+           <ul class="menu">
+             <li><a href="entreprise.html">ACCUEIL</a></li>
+             <li><a href="inscription.html">INSCRIS-TOI</a></li>
+             <li><a href="reser.html">RESERVER</a></li>
+          
+           </ul>
+         </header>
+
+         <div id="Form">
+
+         <input placeholder="Nom" id="Nom" required><br/>
+         <input placeholder="Année de naissance" id="annee" required/><br/>
+         <input type="email" placeholder="Email" id="Email" required><br/>
+
+         <select id="Voiture">
+             <option value="None">Voitures</option>
+              <option value="RENAULT">renault duster silver</option>
+              <option value="RANGE Rover">range rover evoque</option>
+              <option value="BMW">BMW X2 Rouge</option>
+              <option value="MERCEDES">mercedes cla 220</option>
+         </select><br/>
+         <select id="Place">
+            <option value="None">LES PLACES</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+         </select><br/>
+         <select id="Prd">
+            <option value="None">periode de location</option>
+            <option value="1 Jour">1 jour</option>
+            <option value="2 Jour">2 jour</option>
+            <option value="3 Jour">3 jour</option>
+            <option value="4 Jour">4 jour</option>
+            <option value="5 Jour">5 jour</option>
+            <option value="6 Jour">6 jour</option>
+            <option value="7 Jour">7 jour</option>
+          </select><br/>
+         <p style="text-align: center;"><button onclick="age();">Reserver</button></p>
+         <br /><br />
+      
+        </div>
+        <div id="monSpan" style="text-align: center; position: relative;margin-left: auto; margin-right: auto; width: 30%; box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);">
+        </div>
+         <script>
+         
+         //création de variables
+         var anneeNaissance;
+         var age;
+         var phrase;
+         var annee = new Date().getFullYear();
+         var nom;
+         var email;
+         var Voiture;
+         var Place;
+         var PeriodeL;
+
+         function age() {
+           //Attribution des valeurs a (donnée par l'utilisateur) et b (calculée par la fonction)
+           anneeNaissance = parseInt(document.getElementById("annee").value);
+           age = annee - anneeNaissance;
+           nom = document.getElementById("Nom").value;
+           email = document.getElementById("Email").value;
+           Voiture = document.getElementById("Voiture").value;
+           Place = document.getElementById("Place").value;
+           PeriodeL=document.getElementById("Prd").value;
+           //condition pour l'attribution de la valeur c selon l'age de la personne
+           if (age < 18) {
+             phrase = "Vous êtes mineur.";
+           }
+            else {
+                
+                document.getElementById("Form").style.visibility= "hidden";
+             
+   
+                document.getElementById("monSpan").innerHTML =
+             "Votre age est: " + age + " ans! " + "<br/><br/>"+"Votre Nom est:" +nom+"<br/><br/>"+"Votre Email Est: "+email+"<br/><br/>"+"Voiture selectionné est: "+Voiture+"<br/><br/>"+"Nombre Place est: "+Place+"<br/><br/>"+"Nombre de personne acompagnie est:" +PeriodeL;
+             
+
+           } 
+           //inscription du tout dans le span
+           
+         }
+            
+         
+         </script>
+  
+     
+
+</body>
+</html>

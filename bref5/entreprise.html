@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Galerie</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    </head>
+    <body>
+        <header class="header">
+         <img src="image/logocar.png" alt="logo" class="logo">
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            <ul class="menu">
+              <li><a href="entreprise.html">ACCUEIL</a></li>
+              <li><a href="inscription.html">INSCRIS-TOI</a></li>
+              <li><a href="reser.html">RESERVER</a></li>
+            </ul>
+          </header>
+          
+<h2 class="w3-center">Manual Slideshow</h2>
+<div class="SlidesM">
+<div class="w3-content">
+  <img class="mySlides" src="image/A.jpeg" >
+  <img class="mySlides" src="image/B.jpeg" >
+  <img class="mySlides" src="image/C.jpeg" >
+  <img class="mySlides" src="image/D.jpeg" >
+</div>
+<a class="B1" onclick="plusDivs(-1)">&#10094;</a>
+<a class="B2" onclick="plusDivs(1)">&#10095;</a>
+<p class="p1">Bienvenue chez Mehdi car, location de voiture au Maroc.
+  <br><br>
+  Partez à la découverte du Maroc à un prix avantageux.</p>
+</div>
+<div class="info">
+<div class="p2"><p >Pourquoi nous choisir?</p></div>  
+<div class="p4">
+  <p class="p3">Tarifs exclusifs chez la majorité de fournisseurs</p>
+  <p class="p">Avec plus de 2 000 000 offres de voitures à louer dans plus de 150 pays,
+    <br>
+   nous pouvons vous trouver la bonne voiture, sur le bon endroit au meilleur prix.</p>
+  <p class="p3">Excellent niveau de satisfaction client</p> 
+  <p class="p">Excellente évaluation sur Trustpilot - 4.6, basée sur des milliers d'avis clients vérifiés</p>
+  <p class="p3">Assistance personnalisée lors du processus de réservation</p> 
+  <p class="p">Service clientèle 24/7 via votre canal préféré - chat, téléphone, email - en 12 langues</p>
+</div>
+</div> 
+<div class="promo">
+
+  <div class="Voiture1">
+  <div class="voiture2">
+    <img src="image/renault.png" alt="" width="70%" >
+    <h3>renault duster silver</h3>
+    <ul>
+      <li id="li1">Disel</li>
+      <li>A partir de 1,199 MAD par jour</li>
+    </ul>
+    <button><a href="reser.html">Reserver</a></button>
+  </div>
+
+  <div class="voiture2">
+    <img src="image/land-rover-range-rover.png" alt="" width="60%">
+    <h3> range rover evoque</h3>
+    <ul>
+      <li id="li1">Disel</li>
+      <li>A partir de 1,599 MAD par jour</li>
+    </ul>
+    <button><a href="reser.html">Reserver</a></button>
+  </div>
+  </div>
+  
+  <div class="Voiture3">
+    <div class="voiture2">
+      <img src="image/car4.png" alt="" width="100%" >
+      <h3>BMW X2</h3>
+      <ul>
+        <li id="li1">Disel</li>
+        <li>A partir de 799 MAD par jour</li>
+      </ul>
+      <button><a href="reser.html">Reserver</a></button>
+    </div>
+    <div class="voiture4">
+      <img src="image/7Tf2UpYvDB1IkPgizsw5b0md8X8.png" alt="" width="60%">
+      <h3>mercedes cla 220</h3>
+      <ul>
+        <li id="li1">Disel</li>
+        <li>A partir de 799 MAD par jour</li>
+      </ul>
+      <button><a href="reser.html">Reserver</a></button>
+    </div>
+    </div>
+  </div>
+  <footer>
+
+    <div class="footer-right">
+
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+
+    </div>
+    <div class="footer-left">
+      <p>Company Name &copy; 2015</p>
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  var slideIndex = 1;
+  showDivs(slideIndex);
+  
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+  
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+  </script>
+
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

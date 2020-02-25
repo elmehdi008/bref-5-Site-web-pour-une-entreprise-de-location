@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>login</title>
+        <link rel="stylesheet" href="inscri.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+        
+        
+    </head>
+<body>
+  <header class="header">
+    <img src="image/logocar.png" alt="logo" class="logo">
+       <input class="menu-btn" type="checkbox" id="menu-btn" />
+       <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+       <ul class="menu">
+         <li><a href="entreprise.html">ACCUEIL</a></li>
+         <li><a href="inscription.html">INSCRIS-TOI</a></li>
+         <li><a href="reser.html">RESERVER</a></li>
+      
+       </ul>
+     </header>
+
+     <form action="" style="max-width:500px;margin:auto" >
+      <div class="forme1">
+      <h2>login</h2>
+      <div class="input-container">
+        <i class="fa fa-envelope icon"></i>
+        <input class="input-field" type="text" placeholder="Username" name="usrnm">
+      </div>
+    
+      <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        <input class="input-field" type="password" placeholder="Password" name="email" id="password">
+      </div>
+      
+      <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        <input class="input-field" type="password" placeholder="Confirmation de password" name="psw" id="confirm_password">
+      </div>
+    
+      <button type="submit" class="btn">entre</button>
+  </div>
+    </form>
+
+
+<script>
+ var password = document.getElementById("password"),
+            confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword() {
+            if (password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Erreur de Mot de Passe");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+</script>
+
+
+</body>
+
+</html>
